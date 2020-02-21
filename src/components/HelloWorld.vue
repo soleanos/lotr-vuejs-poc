@@ -1,13 +1,54 @@
 <template>
   <div class="hello">
+    <md-toolbar class="md-large md-primary">
+      <div class="md-toolbar-row">
+        <div class="md-toolbar-section-start">
+          <md-button class="md-icon-button">
+            <md-icon>menu</md-icon>
+          </md-button>
+        </div>
+
+        <div class="md-toolbar-section-end">
+          <md-button class="md-icon-button">
+            <md-icon>refresh</md-icon>
+          </md-button>
+
+          <md-button class="md-icon-button">
+            <md-icon>more_vert</md-icon>
+          </md-button>
+        </div>
+      </div>
+
+      <div class="md-toolbar-row md-toolbar-offset">
+        <h3 class="md-title">Lord of the Ring Mercato</h3>
+      </div>
+    </md-toolbar>
+
     <div
       v-for="(item, index) in characters"
       v-bind:item="item"
       v-bind:index="index"
       v-bind:key="item.id">
-      {{item.name}}
-    </div>
+      
+      <div>
+        <md-card>
+          <md-card-header>
+            <div class="md-title"> {{item.name}}</div>
+          </md-card-header>
 
+          <md-card-content>
+              Race : {{item.race}}  <br>
+              Genre : {{item.gender}} <br>
+              Date de naissance : {{item.birth}} <br>
+              Royaume : {{item.realm}}
+          </md-card-content>
+
+          <md-card-actions>
+            <md-button>Ajouter à l'équipe</md-button>
+          </md-card-actions>
+        </md-card>
+      </div>
+    </div>
   </div>
 </template>
 

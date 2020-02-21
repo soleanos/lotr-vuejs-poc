@@ -1,8 +1,33 @@
 import Vue from 'vue'
 import App from './App.vue'
+import VueMaterial from 'vue-material'
+import { MdButton, MdContent, MdTabs } from 'vue-material/dist/components'
+import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/default.css'
+import VueRouter from 'vue-router'
+
+Vue.use(MdButton)
+Vue.use(MdContent)
+Vue.use(MdTabs)
+Vue.use(VueRouter)
+Vue.use(VueMaterial)
 
 Vue.config.productionTip = false
 
+const Foo = { template: '<div>foo</div>' }
+const Bar = { template: '<div>bar</div>' }
+
+const routes = [
+  { path: '/foo', component: Foo },
+  { path: '/bar', component: Bar }
+]
+
+const router = new VueRouter({
+  routes 
+});
+
+
 new Vue({
-  render: h => h(App),
+  router,
+  render: h => h(App)
 }).$mount('#app')
