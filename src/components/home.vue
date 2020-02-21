@@ -1,29 +1,5 @@
 <template>
-  <div class="hello">
-    <md-toolbar class="md-large md-primary">
-      <div class="md-toolbar-row">
-        <div class="md-toolbar-section-start">
-          <md-button class="md-icon-button">
-            <md-icon>menu</md-icon>
-          </md-button>
-        </div>
-
-        <div class="md-toolbar-section-end">
-          <md-button class="md-icon-button">
-            <md-icon>refresh</md-icon>
-          </md-button>
-
-          <md-button class="md-icon-button">
-            <md-icon>more_vert</md-icon>
-          </md-button>
-        </div>
-      </div>
-
-      <div class="md-toolbar-row md-toolbar-offset">
-        <h3 class="md-title">Lord of the Ring Mercato</h3>
-      </div>
-    </md-toolbar>
-
+  <div class="home">
     <div
       v-for="(item, index) in characters"
       v-bind:item="item"
