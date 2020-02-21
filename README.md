@@ -1,2 +1,2 @@
-# marvelito
-Application basique en Vue.js faisant appel à l'api Marvel
+
+Application basique en Vue.js faisant appel à une api LOTR
